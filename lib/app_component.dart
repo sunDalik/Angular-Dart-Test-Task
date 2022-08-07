@@ -30,4 +30,8 @@ class AppComponent implements OnInit {
     String offset = (((itemTimestamp - starTimestamp) / (endTimestamp - starTimestamp)) * width).toString();
     return offset;
   }
+
+  bool isComplete(var item){
+    return int.parse(item['progress'].replaceAll('%','')) >= 100;
+  }
 }

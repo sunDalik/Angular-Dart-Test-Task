@@ -16,17 +16,26 @@
   align-items: center;
 }
 
-.timeline__item-dot {
+.timeline__item-dot,
+.timeline__item-dot_incomplete {
   display: inline-block;
   width: 23px;
   height: 23px;
-  background: blue;
   border-radius: 50%;
+}
+
+.timeline__item-dot {
+  background: blue;
+}
+
+.timeline__item-dot_incomplete {
+  border: 2px solid blue;
 }
 
 .timeline__item-state {
   width: 0;
   white-space: nowrap;
+  margin-left: 30px;
 }
 
 .timeline__date {
