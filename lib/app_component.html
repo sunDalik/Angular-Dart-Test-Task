@@ -2,8 +2,9 @@
     <ng-container *ngFor="let obj of data['objects']">
         <h2>{{obj['obj_name']}}</h2>
         <div class="timeline">
-            <div class="timeline__item" *ngFor="let item of obj['items']">
-                <div>{{item['state']}}</div>
+            <div class="timeline__item" *ngFor="let item of obj['items']"
+                [style.left]="getItemOffset(item, obj, 300) + 'px'">
+                <div class="timeline__item-state">{{item['state']}}</div>
                 <div class="timeline__item-dot"></div>
                 <div class="timeline__date">{{formatDate(item['timestamp'])}}</div>
             </div>

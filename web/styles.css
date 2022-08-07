@@ -9,6 +9,8 @@
 }
 
 .timeline__item {
+  position: absolute;
+  top: 60px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +22,11 @@
   height: 23px;
   background: blue;
   border-radius: 50%;
+}
+
+.timeline__item-state {
+  width: 0;
+  white-space: nowrap;
 }
 
 .timeline__date {

@@ -6,7 +6,7 @@ var MOCK_DATA = '''{
       "items": [
         {
           "state": "Регистрация",
-          "timestamp": "1659804988105",
+          "timestamp": "1654004988105",
           "progress": "100%"
         },
         {
