@@ -3,9 +3,19 @@
 @import url(https://fonts.googleapis.com/css?family=Material+Icons);
 
 .timeline {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
+}
+
+.timeline::before {
+  content: '';
+  height: 2px;
+  background: black;
+  width: 100%;
+  position: relative;
+  top: 10px;
+  left: 38px;
 }
 
 .timeline__item {
@@ -40,4 +50,5 @@
 
 .timeline__date {
   white-space: pre;
+  text-align: center;
 }

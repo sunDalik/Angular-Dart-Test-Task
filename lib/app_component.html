@@ -1,9 +1,9 @@
 <div *ngIf="data != null">
     <div *ngFor="let obj of data['objects']">
         <h2>{{obj['obj_name']}}</h2>
-        <div class="timeline">
+        <div class="timeline" [style.width]="'70%'">
             <div class="timeline__item" *ngFor="let item of obj['items']"
-                [style.left]="getItemOffset(item, obj, 600) + 'px'">
+                [style.left]="getItemOffset(item, obj, 70) + '%'">
                 <div class="timeline__item-state">{{item['state']}}</div>
                 <div [class]="isComplete(item) ? 'timeline__item-dot' : 'timeline__item-dot_incomplete'"></div>
                 <div class="timeline__date">{{formatDate(item['timestamp'])}}</div>
