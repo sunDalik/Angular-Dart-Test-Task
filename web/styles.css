@@ -14,8 +14,8 @@
   background: black;
   width: 100%;
   position: relative;
-  top: 10px;
-  left: 38px;
+  top: 14px;
+  left: 27px;
 }
 
 .timeline__item {
@@ -29,8 +29,8 @@
 .timeline__item-dot,
 .timeline__item-dot_incomplete {
   display: inline-block;
-  width: 23px;
-  height: 23px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
 }
 
@@ -40,15 +40,20 @@
 
 .timeline__item-dot_incomplete {
   border: 2px solid blue;
+  box-sizing: border-box;
 }
 
 .timeline__item-state {
   width: 0;
   white-space: nowrap;
   margin-left: 30px;
+  margin-bottom: 5px;
+  font-size: 18px;
 }
 
 .timeline__date {
   white-space: pre;
   text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
 }
