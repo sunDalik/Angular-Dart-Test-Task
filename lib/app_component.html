@@ -1,5 +1,5 @@
 <div *ngIf="data != null">
-    <ng-container *ngFor="let obj of data['objects']">
+    <div *ngFor="let obj of data['objects']">
         <h2>{{obj['obj_name']}}</h2>
         <div class="timeline">
             <div class="timeline__item" *ngFor="let item of obj['items']"
@@ -9,5 +9,5 @@
                 <div class="timeline__date">{{formatDate(item['timestamp'])}}</div>
             </div>
         </div>
-    </ng-container>
+    </div>
 </div>
