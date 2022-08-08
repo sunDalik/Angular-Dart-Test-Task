@@ -16,6 +16,16 @@ class AppComponent implements OnInit {
       data = json.decode(value);
       print(data);
     });
+
+    Future.delayed(Duration(seconds: 4), () => MOCK_DATA_2).then((value) {
+      data = json.decode(value);
+      print(data);
+    });
+
+    Future.delayed(Duration(seconds: 7), () => MOCK_DATA_3).then((value) {
+      data = json.decode(value);
+      print(data);
+    });
   }
 
   String formatDate(String milliseconds) {
@@ -23,11 +33,12 @@ class AppComponent implements OnInit {
     return '${date.hour.toString().padLeft(2, '0')}.${date.minute.toString().padLeft(2, '0')}.${date.second.toString().padLeft(2, '0')}\n${date.day.toString().padLeft(2, '0')}.${date.month.toString().padLeft(2, '0')}.${date.year}';
   }
 
-  String getItemOffset(var item, var obj, int width){
-    int itemTimestamp = int.parse(item['timestamp']);
-    int starTimestamp = int.parse(obj['items'][0]['timestamp']);
+  String getItemOffset(int index, var obj, int width){
+    int startTimestamp = int.parse(obj['items'][0]['timestamp']);
     int endTimestamp = int.parse(obj['items'][obj['items'].length - 1]['timestamp']);
-    String offset = (((itemTimestamp - starTimestamp) / (endTimestamp - starTimestamp)) * width).toString();
+    int itemTimestamp = int.parse(obj['items'][index]['timestamp']);
+
+    String offset = (((itemTimestamp - startTimestamp) / (endTimestamp - startTimestamp)) * width).toString();
     return offset;
   }
 
